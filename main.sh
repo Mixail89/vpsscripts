@@ -34,9 +34,9 @@ case $input in
     sudo pufferpanel user add
     sudo systemctl enable --now pufferpanel;;
     1)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/fastpanel/install.sh && bash install.sh;;
+    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/fastpanel/install.sh && bash install.sh;;
     2)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/crdpscript/install.sh && bash install.sh;;
+    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/crdpscript/install.sh && bash install.sh;;
     3)
     apt install git neofetch sudo
     echo "##############################"
@@ -45,6 +45,6 @@ case $input in
     echo ""
     echo "##############################";;
     4)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/pterodactyl/install.sh && bash install.sh;;
+    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/pterodactyl/install.sh && bash install.sh;;
     5) echo "Exit" && exit;;
 esac
