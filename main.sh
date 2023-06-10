@@ -15,23 +15,23 @@ echo "#"
 echo "#"
 echo "#######################################################################################"
 echo ""
-echo "* [0] Install Basic Packages"
-echo "* [1] Install Pterodactyl Panel"
-echo "* [2] Install PufferPanel"
-echo "* [3] Install FastPanel"
-echo "* [4] Exit"
+echo "* [1] Install Basic Packages"
+echo "* [2] Install Pterodactyl Panel"
+echo "* [3] Install PufferPanel"
+echo "* [4] Install FastPanel"
+echo "* [0] Exit"
 
-read -p "Enter Input (0-3): " input
+read -p "Enter Input (1-4): " input
 
 case $input in
 
-    0)
-    wget -N "$GITHUB_BASE_URL"/scripts/packages/install.sh && bash install.sh;;
     1)
-    wget -N "$GITHUB_BASE_URL"/scripts/pterodactyl/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/packages/install.sh && bash install.sh;;
     2)
-    wget -N "$GITHUB_BASE_URL"/scripts/pufferpanel/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/pterodactyl/install.sh && bash install.sh;;
     3)
+    wget -N "$GITHUB_BASE_URL"/scripts/pufferpanel/install.sh && bash install.sh;;
+    4)
     wget -N "$GITHUB_BASE_URL"/scripts/fastpanel/install.sh && bash install.sh;;
-    4) echo "Exit" && exit;;
+    0) echo "Exit" && exit;;
 esac
