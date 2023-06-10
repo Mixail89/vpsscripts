@@ -5,7 +5,7 @@ fi
 
 apt install sudo -y
 
-export GITHUB_BASE_URL="https://raw.githubusercontent.com/Mixail89/vpsscripts/main"
+GITHUB_BASE_URL="https://raw.githubusercontent.com/Mixail89/vpsscripts/main"
 echo "#######################################################################################"
 echo "#"
 echo "#                                  MIXAIL89.OVH SCRIPTS"
