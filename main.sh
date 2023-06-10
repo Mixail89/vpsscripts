@@ -26,7 +26,8 @@ read -p "Enter Input (1-4): " input
 case $input in
 
     1)
-    wget -N "$GITHUB_BASE_URL"/scripts/packages/install.sh && bash install.sh;;
+    #wget -N "$GITHUB_BASE_URL"/scripts/packages/install.sh && bash install.sh;;
+    bash <(curl -s "$GITHUB_BASE_URL"/scripts/packages/install.sh);;
     2)
     wget -N "$GITHUB_BASE_URL"/scripts/pterodactyl/install.sh && bash install.sh;;
     3)
