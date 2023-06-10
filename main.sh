@@ -17,12 +17,11 @@ echo "##########################################################################
 echo ""
 echo "* [0] Install PufferPanel"
 echo "* [1] Install FastPanel"
-echo "* [2] Install CRDP/XRDP"
-echo "* [3] Install Basic Packages"
-echo "* [4] Install Pterodactyl Panel"
-echo "* [5] Exit"
+echo "* [2] Install Basic Packages"
+echo "* [3] Install Pterodactyl Panel"
+echo "* [4] Exit"
 
-read -p "Enter Input (0-4): " input
+read -p "Enter Input (0-3): " input
 
 case $input in
 
@@ -31,15 +30,8 @@ case $input in
     1)
     wget -N "$GITHUB_BASE_URL"/scripts/fastpanel/install.sh && bash install.sh;;
     2)
-    wget -N "$GITHUB_BASE_URL"/scripts/crdpscript/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/packages/install.sh && bash install.sh;;
     3)
-    apt install git neofetch sudo
-    echo "##############################"
-    echo ""
-    echo "Installed git and neofetch"
-    echo ""
-    echo "##############################";;
-    4)
     wget -N "$GITHUB_BASE_URL"/scripts/pterodactyl/install.sh && bash install.sh;;
-    5) echo "Exit" && exit;;
+    4) echo "Exit" && exit;;
 esac
