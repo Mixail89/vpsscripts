@@ -5,7 +5,7 @@ fi
 
 apt install sudo -y
 
-
+export GITHUB_BASE_URL="https://raw.githubusercontent.com/Mixail89/vpsscripts/main"
 echo "#######################################################################################"
 echo "#"
 echo "#                                  MIXAIL89.OVH SCRIPTS"
@@ -27,16 +27,11 @@ read -p "Enter Input (0-4): " input
 case $input in
 
     0)
-    apt update && apt install curl -y
-    curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-    sudo apt-get install pufferpanel
-    sudo systemctl enable pufferpanel
-    sudo pufferpanel user add
-    sudo systemctl enable --now pufferpanel;;
+    wget -N "$GITHUB_BASE_URL"/scripts/pufferpanel/install.sh && bash install.sh;;
     1)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/fastpanel/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/fastpanel/install.sh && bash install.sh;;
     2)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/crdpscript/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/crdpscript/install.sh && bash install.sh;;
     3)
     apt install git neofetch sudo
     echo "##############################"
@@ -45,6 +40,6 @@ case $input in
     echo ""
     echo "##############################";;
     4)
-    wget -N https://raw.githubusercontent.com/Mixail89/vpsscripts/main/scripts/pterodactyl/install.sh && bash install.sh;;
+    wget -N "$GITHUB_BASE_URL"/scripts/pterodactyl/install.sh && bash install.sh;;
     5) echo "Exit" && exit;;
 esac
