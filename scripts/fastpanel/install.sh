@@ -11,7 +11,7 @@ echo "* [1] Install FastPanel"
 echo "* [0] Exit"
 echo ""
 
-read -p "Enter Input (1-4): " input
+read -p "Enter Input (1/0): " input
 
 
 case $input in
@@ -20,5 +20,5 @@ case $input in
     apt-get update
     apt-get install wget
     wget http://repo.fastpanel.direct/install_fastpanel.sh -O - | bash -;;
-    0) echo "Exit" && exit;;
+    0) bash <(curl -s https://raw.githubusercontent.com/Mixail89/vpsscripts/main/main.sh);;
 esac
