@@ -20,6 +20,7 @@ echo "* [2] Install Pterodactyl Panel"
 echo "* [3] Install PufferPanel"
 echo "* [4] Install FastPanel"
 echo "* [0] Exit"
+echo ""
 
 read -p "Enter Input (1-4): " input
 
